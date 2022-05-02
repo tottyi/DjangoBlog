@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p class="badge bg-primary text-wrap" style="width: 6rem;">Hi {{ user.username }}!</p>
+    <p><a class='btn btn-outline-secondary btn-sm' href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+    <p>You are not logged in</p>
+    <p><a class='btn btn-outline-secondary btn-sm' href="{% url 'login' %}">Log In</a></p>
+{% endif %}
+<div class="row g-3">
+    {% for i in blog %}
+        <div class="form-control">
+            <div>
+                <div>Title: <strong>{{ i.title }}</strong> | User Id: {{ i.userId }}
+                    <a href="{% url 'edit' i.id %}" class='btn btn-outline-secondary btn-sm'>Edit</a>
+                    <a href="{% url 'delete' i.id %}" class='btn btn-outline-secondary btn-sm'>Delete</a></div>
+                <div class="form-control">{{ i.body }}</div><br>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
