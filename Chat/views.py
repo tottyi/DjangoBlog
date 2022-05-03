@@ -11,6 +11,8 @@ from django.urls import reverse_lazy
 def home(request):
 
     blog = Posts.objects.all()
+    
+    response=requests.get('https://jsonplaceholder.typicode.com/posts').json()
 
     return render(request, 'home.html', {'blog': blog})
 
