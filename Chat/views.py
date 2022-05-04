@@ -4,7 +4,7 @@ from . models import User, Posts
 from .forms import RegisterForm, Registracia
 from django.views.generic import DeleteView
 from django.urls import reverse_lazy
-
+import requests
 
 # Create your views here.
 
