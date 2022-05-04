@@ -3,7 +3,7 @@ python -m venv virtual
 
 #####################################
 
-pip install django,
+pip install django
 pip install django-crispy-forms
 pip install requests
 pip install djangorestframework
