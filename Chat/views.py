@@ -14,7 +14,7 @@ def home(request):
     
     response=requests.get('https://jsonplaceholder.typicode.com/posts').json()
 
-    return render(request, 'home.html', {'blog': blog})
+    return render(request, 'home.html', {'blog': blog, 'response': response}))
 
 def reg(request):
 
