@@ -34,6 +34,13 @@ urllib3             1.26.9
 zipp                3.8.0
 
 #####################################
+
+Spustanie aplikaciu
+
+localhost:8000
+
+#####################################
+
 API view
 
 localhost:8000/posts
@@ -41,4 +48,5 @@ localhost:8000/posts
 Login: admin Password: 123 //Len preto take kratke heslo abi som nemusel vela pisat
 
 Na users treba bit prihlaseni ako admin
+
 localhost:8000/users
